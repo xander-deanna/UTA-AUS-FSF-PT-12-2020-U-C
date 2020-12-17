@@ -1,0 +1,16 @@
+h1::first-letter {
+    color: #aa0000;}
+
+
+a:hover {
+    color: #ff0606;
+}
+
+a:active {
+    color: #ffda06;
+    background-color: black;
+}
+  
+a {
+    color: #000000;
+}
