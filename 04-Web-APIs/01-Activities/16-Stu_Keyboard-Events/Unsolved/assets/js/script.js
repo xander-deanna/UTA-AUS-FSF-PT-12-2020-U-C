@@ -1,14 +1,18 @@
 var eventType = document.querySelector("#event-type"); 
 var keyEventsEl = document.querySelector("#key-events");
 
-function keydownAction(event) {
-  // TODO: Complete keydown function
+function keydownAction() {
+  document.querySelector("#status").textContent = "KEYDOWN Event";
+  document.querySelector("#key").textContent = event.key;
+  document.querySelector("#code").textContent = event.code;
 }
 
 function keyupAction() {
-  document.querySelector("#status").innerHTML = "KEYUP Event";
+  document.querySelector("#status").textContent = "KEYUP Event";
 }
 
+document.addEventListener("keydown", keydownAction);
 document.addEventListener("keyup", keyupAction);
-// TODO: Add Event Listener for "keydown" event
+
+
 

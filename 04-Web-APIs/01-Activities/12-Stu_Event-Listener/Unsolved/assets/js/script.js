@@ -9,4 +9,13 @@ function setCounterText() {
 
 // TODO: Add event listener to increment button
 
-// TODO: Add event listener to decrement button 
+incrementEl.addEventListener("click", function(){
+  count +=1;
+  setCounterText();
+});
+
+// TODO: Add event listener to decrement button
+decrementEL.addEventListener("click", function(){
+  count--;
+  setCounterText();
+});
