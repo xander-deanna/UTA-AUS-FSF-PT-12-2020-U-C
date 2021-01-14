@@ -3,7 +3,7 @@ var todoForm = document.querySelector("#todo-form");
 var todoList = document.querySelector("#todo-list");
 var todoCountSpan = document.querySelector("#todo-count");
 
-var todos = [];
+var todos = []; //empty array//
 
 // TODO: What is the purpose of this function?
 function renderTodos() {
@@ -11,7 +11,7 @@ function renderTodos() {
   todoList.innerHTML = "";
   todoCountSpan.textContent = todos.length;
   
-  // TODO: Describe the functionality of the following `for` loop.
+  // TODO: Describe the functionality of the following `for` loop. adding list items to the html for each  thing user types
   for (var i = 0; i < todos.length; i++) {
     var todo = todos[i];
 
@@ -60,7 +60,7 @@ todoForm.addEventListener("submit", function(event) {
   renderTodos();
 });
 
-// TODO: Describe the purpose of the following line of code.
+// TODO: Describe the purpose of the following line of code. allows the thing to be deleted if button is clicked
 todoList.addEventListener("click", function(event) {
   var element = event.target;
   // TODO: Describe the functionality of the following `if` statement.
