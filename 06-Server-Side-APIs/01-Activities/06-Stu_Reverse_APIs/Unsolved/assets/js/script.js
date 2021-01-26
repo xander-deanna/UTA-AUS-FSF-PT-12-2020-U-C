@@ -4,7 +4,7 @@ var requestUrl = 'https://api.github.com/orgs/Netflix/repos';
 // TODO: Comment on how AJAX returns an API call
 $.ajax({
   url: requestUrl,
-  method: 'GET',
+
 }).then(function (response) {
   console.log('AJAX Response \n-------------');
   console.log(response);
