@@ -4,7 +4,7 @@ var limitWarningEl = document.querySelector('#limit-warning');
 
 var getRepoName = function () {
   // Where is this value coming from?
-  // TODO: Write your answer here
+  // TODO: This is coming from the function for the variable "getRepoIssues"
   var queryString = document.location.search;
   var repoName = queryString.split('=')[1];
 
@@ -14,7 +14,7 @@ var getRepoName = function () {
     getRepoIssues(repoName);
   } else {
     // Under what condition will this run?
-    // TODO: Write your answer here
+    // If there is no repo to display, this will return to the homepage using a redirect
     document.location.replace('./index.html');
   }
 };
