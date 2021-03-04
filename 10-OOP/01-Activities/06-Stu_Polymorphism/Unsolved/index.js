@@ -16,17 +16,35 @@ function Student(first, last, age) {
     // Return a letter grade if a number grade was passed
     // Ex. 95 => 'A'
     if (typeof input === 'number') {
-      // TODO: Add logic here to return a single letter grade
-      return response;
+    return response;
     }
+    
     // Return a range if a letter grade was passed
     // Ex. 'A' => '90 - 100'
     if (typeof input === 'string') {
-      // TODO: Add logic here to return range as a string
+      switch (grade) {
+        case 'A': 
+          reponse = '90 - 100';
+          break;
+        case 'B': 
+          reponse = '80 - 89';
+          break;
+        case 'C': 
+          reponse = '70 - 79';
+          break;
+        case 'D': 
+          reponse = '60 - 69';
+          break;
+        case 'F':
+          response = '1 - 59'
+        default:
+          response = '0'
+          break;
+        }
+      }
       return response;
     }
   };
-}
 
 const John = new Student('John', 'Appleseed', '30');
 console.log('John.displayGrade():', John.displayGrade(95));
