@@ -1,25 +1,25 @@
-DROP DATABASE IF EXISTS ice_creamDB;
+DROP DATABASE IF EXISTS play_listDB;
 
-CREATE DATABASE ice_creamDB;
+CREATE DATABASE play_listDB;
 
 USE ice_creamDB;
 
-CREATE TABLE products (
+CREATE TABLE songs (
   id INT NOT NULL AUTO_INCREMENT,
-  flavor VARCHAR(45) NULL,
-  price DECIMAL(10,2) NULL,
-  quantity INT NULL,
+  title VARCHAR(45) NOT NULL,
+  artist VARCHAR(45) NOT NULL,
+  genre VARCHAR(45) NOT NULL,
   PRIMARY KEY (id)
 );
 
-INSERT INTO products (flavor, price, quantity)
+INSERT INTO songs (title, artist, genre)
+VALUES ("Hold On", "Wilson Phillips" );
+
+INSERT INTO songs (title, artist, genre)
 VALUES ("vanilla", 2.50, 100);
 
-INSERT INTO products (flavor, price, quantity)
-VALUES ("chocolate", 3.10, 120);
-
-INSERT INTO products (flavor, price, quantity)
-VALUES ("strawberry", 3.25, 75);
+INSERT INTO songs (title, artist, genre)
+VALUES ("vanilla", 2.50, 100);
 
 -- ### Alternative way to insert more than one row
 -- INSERT INTO products (flavor, price, quantity)
