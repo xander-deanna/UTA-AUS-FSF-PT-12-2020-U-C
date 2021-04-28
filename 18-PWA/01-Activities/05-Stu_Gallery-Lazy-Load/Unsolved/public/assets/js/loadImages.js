@@ -9,7 +9,23 @@ function createEl(htmlString = "", className) {
 }
 
 function initLazyImages() {
-  // Enter your lazy loading code here
+  if('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((items, observer) => {
+      items.forEach((item) => {
+        if(item.isIntersecting) {
+          loadImages(item.target);
+          observer.unobserve(item.target);
+        }
+      });
+    });
+    imagesToLoad.forEach((img) => {
+      observer.observe(img);
+    });
+  } else {
+    imagesToLoad.forEach((img) => {
+      loadImages(img);
+    });
+  }
 }
 
 function loadImages() {
@@ -43,6 +59,8 @@ function createCard(image) {
   const imageContainer = createEl("div", "card__image-container");
   const img = createEl("img", "card-img-top card__image--cover");
   // Enter your additional code here
+  
+  
   img.setAttribute("src", image.image);
   img.setAttribute("alt", image.description);
 
