@@ -5,7 +5,8 @@ class Form extends Component {
   // Setting the component's initial state
   state = {
     firstName: "",
-    lastName: ""
+    lastName: "",
+    password:""
   };
 
   handleInputChange = event => {
@@ -27,7 +28,8 @@ class Form extends Component {
     alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
     this.setState({
       firstName: "",
-      lastName: ""
+      lastName: "",
+      password:""
     });
   };
 
@@ -53,9 +55,20 @@ class Form extends Component {
             type="text"
             placeholder="Last Name"
           />
+            <input
+            value={this.state.password}
+            name="password"
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="password"
+          />
           <button onClick={this.handleFormSubmit}>Submit</button>
         </form>
       </div>
+
+    
+
+    if this.state.password.length < 6 alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
     );
   }
 }
