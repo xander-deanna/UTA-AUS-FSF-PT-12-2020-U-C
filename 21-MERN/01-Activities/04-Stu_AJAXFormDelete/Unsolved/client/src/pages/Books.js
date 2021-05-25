@@ -7,7 +7,9 @@ import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
 function Books() {
-  // Setting our component's initial state
+  state = {
+    formObject: {},
+  }
   const [books, setBooks] = useState([])
 
   // update the initial state to provide values for
